@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /assets/img/
+
+Sitemap: https://fotusbrasilflow.com.br/sitemap.xml

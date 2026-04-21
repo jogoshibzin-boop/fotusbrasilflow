@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fotus Brasil Flow — Calculadora Premium de Pedágios</title>
+<meta name="description" content="Calculadora informativa de pedágios e rotas brasileiras. Sistema gratuito, transparente e em conformidade com a ANTT.">
+<meta name="keywords" content="calculadora pedágio, pedágios brasil, valor pedágio, rota com pedágio">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Fotus Brasil Flow">
+<link rel="canonical" href="https://fotusbrasilflow.com.br/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fotus Brasil Flow — Calculadora Premium de Pedágios">
+<meta property="og:description" content="Sistema informativo de cálculo de pedágios nas rodovias brasileiras.">
+<meta property="og:locale" content="pt_BR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Fotus Brasil Flow",
+  "url": "https://fotusbrasilflow.com.br/",
+  "description": "Calculadora premium de pedágios e rotas pelo Brasil",
+  "inLanguage": "pt-BR"
+}
+</script>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo">
+            <div class="logo-mark"><span>F</span></div>
+            <div class="logo-text">
+                <strong>Fotus</strong>
+                <small>Brasil Flow</small>
+            </div>
+        </a>
+        <nav class="nav">
+            <a href="index.html" class="active">Início</a>
+            <a href="#calculadora">Calcular</a>
+            <a href="#conteudo">Conteúdo</a>
+            <a href="pages/sobre.html">Sobre</a>
+            <a href="pages/contato.html">Contato</a>
+        </nav>
+        <button class="menu-toggle" aria-label="Menu">≡</button>
+    </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+    <div class="hero-grid"></div>
+    <div class="container hero-inner">
+        <div class="hero-content">
+            <span class="eyebrow">Calculadora Premium · 2026</span>
+            <h1>Planejamento <em>premium</em> para suas rotas pelo Brasil.</h1>
+            <p class="hero-lead">
+                Sistema informativo gratuito que calcula pedágios, combustível e tempo estimado das principais rotas rodoviárias do país — com transparência absoluta sobre cada praça percorrida.
+            </p>
+            <div class="hero-actions">
+                <a href="#calculadora" class="btn btn-gold btn-lg">
+                    Calcular Rota
+                    <span style="font-size: 1.1em;">→</span>
+                </a>
+                <a href="#conteudo" class="btn btn-ghost btn-lg">Saiba mais</a>
+            </div>
+            <div class="hero-meta">
+                <div class="hero-meta-item">
+                    <span class="hero-meta-number">8</span>
+                    <span class="hero-meta-label">Rotas Mapeadas</span>
+                </div>
+                <div class="hero-meta-item">
+                    <span class="hero-meta-number">4</span>
+                    <span class="hero-meta-label">Categorias</span>
+                </div>
+                <div class="hero-meta-item">
+                    <span class="hero-meta-number">100%</span>
+                    <span class="hero-meta-label">Gratuito</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-deco"></div>
+            <div class="hero-image-frame">
+                <img src="assets/img/pedagio-hero.png" alt="Praça de pedágio em rodovia brasileira">
+            </div>
+            <div class="hero-badge-card">
+                <div class="badge-kicker">Base Nacional</div>
+                <div class="badge-num">2.500+</div>
+                <div class="badge-label">Praças mapeadas no território brasileiro</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CALCULADORA ============ -->
+<section class="calculator" id="calculadora">
+    <div class="container">
+        <div class="calc-wrap">
+            <div class="calc-intro">
+                <span class="eyebrow">Ferramenta Principal</span>
+                <h2>A calculadora mais <em>transparente</em> do Brasil.</h2>
+                <p>Três passos simples separam você do custo total estimado da sua próxima viagem rodoviária.</p>
+
+                <div class="calc-step">
+                    <div class="calc-step-num">01</div>
+                    <div class="calc-step-text">
+                        <strong>Informe origem e destino</strong>
+                        <span>Consulte as rotas disponíveis em nossa base de dados.</span>
+                    </div>
+                </div>
+                <div class="calc-step">
+                    <div class="calc-step-num">02</div>
+                    <div class="calc-step-text">
+                        <strong>Selecione seu veículo</strong>
+                        <span>Carro, moto, caminhão ou ônibus — tarifa ajustada por categoria.</span>
+                    </div>
+                </div>
+                <div class="calc-step">
+                    <div class="calc-step-num">03</div>
+                    <div class="calc-step-text">
+                        <strong>Receba o detalhamento</strong>
+                        <span>Pedágios por praça, distância, tempo e combustível estimado.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calc-panel">
+                <div class="calc-title">Sistema de Cálculo</div>
+
+                <form id="calc-form">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label class="form-label" for="origem">Origem</label>
+                            <input type="text" id="origem" class="form-input" placeholder="Ex: São Paulo" list="cidades" required autocomplete="off">
+                        </div>
+                        <div class="form-field">
+                            <label class="form-label" for="destino">Destino</label>
+                            <input type="text" id="destino" class="form-input" placeholder="Ex: Rio de Janeiro" list="cidades" required autocomplete="off">
+                        </div>
+                    </div>
+
+                    <datalist id="cidades">
+                        <option value="São Paulo">
+                        <option value="Rio de Janeiro">
+                        <option value="Belo Horizonte">
+                        <option value="Curitiba">
+                        <option value="Florianópolis">
+                        <option value="Porto Alegre">
+                        <option value="Brasília">
+                        <option value="Vitória">
+                    </datalist>
+
+                    <label class="form-label">Categoria do Veículo</label>
+                    <div class="vehicle-row">
+                        <button type="button" class="vehicle-chip active" data-vehicle="carro">
+                            <span class="chip-icon">◈</span>
+                            <span class="chip-label">Carro</span>
+                        </button>
+                        <button type="button" class="vehicle-chip" data-vehicle="moto">
+                            <span class="chip-icon">◇</span>
+                            <span class="chip-label">Moto</span>
+                        </button>
+                        <button type="button" class="vehicle-chip" data-vehicle="caminhao">
+                            <span class="chip-icon">◆</span>
+                            <span class="chip-label">Caminhão</span>
+                        </button>
+                        <button type="button" class="vehicle-chip" data-vehicle="onibus">
+                            <span class="chip-icon">▣</span>
+                            <span class="chip-label">Ônibus</span>
+                        </button>
+                    </div>
+
+                    <button type="submit" class="btn btn-gold btn-block btn-lg">
+                        Calcular agora <span style="margin-left: 8px;">→</span>
+                    </button>
+                </form>
+
+                <div class="result-card" id="result-card"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CONTEÚDO INFORMATIVO ============ -->
+<section class="section" id="conteudo">
+    <div class="container">
+        <div class="section-header">
+            <span class="eyebrow">Metodologia</span>
+            <h2 class="section-title">Como funciona a cobrança nas <em>rodovias concedidas</em>.</h2>
+            <p class="section-lead">
+                As rodovias pedagiadas brasileiras operam sob concessão pública. Entenda os princípios tarifários que regem cada praça de pedágio no país.
+            </p>
+            <span class="gold-line"></span>
+        </div>
+
+        <div class="numbered-grid">
+            <div class="numbered-item" data-num="01">
+                <h3>Concessão pública regulada</h3>
+                <p>Cada trecho pedagiado é operado por uma concessionária privada supervisionada pela ANTT (federais) ou por agências estaduais. Os contratos preveem obrigações de investimento e manutenção.</p>
+            </div>
+            <div class="numbered-item" data-num="02">
+                <h3>Tarifa por categoria tarifária</h3>
+                <p>A tarifa é definida conforme o número de eixos e o tipo de rodagem. Motos pagam metade; caminhões de dois eixos pagam o dobro; carretas pagam multiplicadores crescentes.</p>
+            </div>
+            <div class="numbered-item" data-num="03">
+                <h3>Reajustes anuais vinculados ao IPCA</h3>
+                <p>Os contratos de concessão preveem reajustes anuais seguindo o IPCA ou outros índices inflacionários. As revisões são publicadas em resoluções oficiais no Diário Oficial.</p>
+            </div>
+            <div class="numbered-item" data-num="04">
+                <h3>Sistema Free Flow em expansão</h3>
+                <p>A cobrança sem cabines, por pórticos eletrônicos, está substituindo gradualmente o modelo tradicional. O motorista tem até 30 dias para pagar sem acréscimos.</p>
+            </div>
+            <div class="numbered-item" data-num="05">
+                <h3>Interoperabilidade de tags</h3>
+                <p>Desde 2021, as tags automáticas funcionam em qualquer rodovia integrada ao sistema ANTT, independentemente da operadora original.</p>
+            </div>
+            <div class="numbered-item" data-num="06">
+                <h3>Desconto de Usuário Frequente</h3>
+                <p>Motoristas com múltiplas passagens mensais na mesma praça podem obter até 50% de desconto por meio do programa DUF, exclusivo para usuários com tag cadastrada.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ EDITORIAL: FREE FLOW ============ -->
+<section class="section" style="padding-top: 0;">
+    <div class="container">
+        <div class="split-editorial">
+            <div class="split-editorial-image">
+                <img src="assets/img/pedagio-eletronico.png" alt="Pórtico de pedágio eletrônico free flow">
+            </div>
+            <div class="split-editorial-text">
+                <span class="eyebrow">Tecnologia</span>
+                <h2>Free Flow: o fim das <em>cabines físicas</em> de pedágio.</h2>
+                <p>O modelo free flow elimina totalmente as cabines tradicionais. Pórticos equipados com antenas RFID e câmeras de reconhecimento de placa identificam veículos em movimento, sem exigir redução de velocidade.</p>
+                <p>Rodovias como a BR-101 Rio-Santos já operam exclusivamente neste modelo. A implantação nacional está prevista em etapas ao longo dos próximos anos.</p>
+                <ul class="split-editorial-list">
+                    <li>Passagem contínua na velocidade normal da via</li>
+                    <li>Cobrança apenas pelos trechos efetivamente utilizados</li>
+                    <li>Prazo de 30 dias para pagamento sem tag</li>
+                    <li>Redução expressiva de congestionamentos em picos</li>
+                </ul>
+                <a href="#calculadora" class="btn btn-outline">Calcular minha rota</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ EDITORIAL: PAGAMENTO ============ -->
+<section class="section" style="padding-top: 0;">
+    <div class="container">
+        <div class="split-editorial reverse">
+            <div class="split-editorial-image">
+                <img src="assets/img/pedagio-tags.png" alt="Sistema de pagamento por aproximação em pedágio">
+            </div>
+            <div class="split-editorial-text">
+                <span class="eyebrow">Formas de Pagar</span>
+                <h2>Pague como quiser, <em>viaje sem filas</em>.</h2>
+                <p>O sistema de pedágios brasileiro aceita múltiplas formas de pagamento. Conhecer as opções disponíveis pode economizar tempo precioso nas viagens longas.</p>
+                <ul class="split-editorial-list">
+                    <li><strong style="color: var(--text-primary);">Dinheiro e cartões</strong> — Aceitos em todas as cabines manuais</li>
+                    <li><strong style="color: var(--text-primary);">Aproximação (contactless)</strong> — Cartões e carteiras digitais</li>
+                    <li><strong style="color: var(--text-primary);">Tag automática</strong> — Sistema de cobrança via fatura mensal</li>
+                    <li><strong style="color: var(--text-primary);">QR Code e Pix</strong> — Disponível em concessionárias modernas</li>
+                    <li><strong style="color: var(--text-primary);">Free Flow</strong> — Cobrança eletrônica sem cabines</li>
+                </ul>
+                <a href="#calculadora" class="btn btn-outline">Simular viagem</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CATEGORIAS TARIFÁRIAS ============ -->
+<section class="section" style="background: var(--black-soft);">
+    <div class="container">
+        <div class="section-header">
+            <span class="eyebrow">Referência ANTT</span>
+            <h2 class="section-title">Categorias tarifárias <em>oficiais</em>.</h2>
+            <p class="section-lead">
+                Toda praça de pedágio no Brasil segue esta classificação tarifária estabelecida pela ANTT e agências reguladoras estaduais.
+            </p>
+            <span class="gold-line"></span>
+        </div>
+
+        <div class="cat-grid">
+            <div class="cat-card">
+                <span class="cat-num">Cat. 01</span>
+                <h3>Automóvel</h3>
+                <p>Veículos de passeio com 2 eixos e rodagem simples. Multiplicador: 1,0 (tarifa base de referência).</p>
+            </div>
+            <div class="cat-card">
+                <span class="cat-num">Cat. 02</span>
+                <h3>Motocicleta</h3>
+                <p>Motos pagam 50% do valor da categoria 1. Multiplicador: 0,5 conforme norma da ANTT.</p>
+            </div>
+            <div class="cat-card">
+                <span class="cat-num">Cat. 03</span>
+                <h3>Caminhão Leve</h3>
+                <p>Caminhões e ônibus de 2 eixos pagam o dobro da categoria 1. Multiplicador: 2,0.</p>
+            </div>
+            <div class="cat-card">
+                <span class="cat-num">Cat. 04</span>
+                <h3>Ônibus</h3>
+                <p>Ônibus rodoviários de 2 ou 3 eixos. Tarifa proporcional ao número de eixos em contato com o solo.</p>
+            </div>
+            <div class="cat-card">
+                <span class="cat-num">Cat. 05</span>
+                <h3>Caminhão Grande</h3>
+                <p>Caminhões de 3 eixos pagam multiplicador 3,0. Cada eixo adicional incrementa o valor proporcionalmente.</p>
+            </div>
+            <div class="cat-card">
+                <span class="cat-num">Cat. 06+</span>
+                <h3>Carretas</h3>
+                <p>Bitrens, rodotrens e carretas de 4 a 9 eixos. Multiplicadores crescentes conforme eixos.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section">
+    <div class="container">
+        <div class="section-header centered">
+            <span class="eyebrow">FAQ</span>
+            <h2 class="section-title">Perguntas <em>frequentes</em>.</h2>
+            <p class="section-lead">Respostas diretas às principais dúvidas sobre o sistema de pedágios brasileiro.</p>
+        </div>
+
+        <div class="faq-wrap">
+            <div class="faq-item">
+                <button class="faq-trigger">
+                    <span>Os valores exibidos são oficiais?</span>
+                    <span class="faq-mark">+</span>
+                </button>
+                <div class="faq-content">
+                    <div class="faq-inner">
+                        Os valores são <strong>estimativas informativas</strong> baseadas em tabelas públicas das concessionárias e agências reguladoras. Reajustes periódicos podem ocorrer — verifique sempre o valor oficial vigente no site da concessionária ou da ANTT antes de viajar.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-trigger">
+                    <span>Por que motos pagam menos?</span>
+                    <span class="faq-mark">+</span>
+                </button>
+                <div class="faq-content">
+                    <div class="faq-inner">
+                        Motos pagam metade do valor da categoria 1 (carro) na maioria das concessionárias, conforme regulamentação da ANTT. A redução considera o <strong>menor impacto das motocicletas no pavimento</strong> e o porte reduzido do veículo.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-trigger">
+                    <span>Caminhões pagam por eixo?</span>
+                    <span class="faq-mark">+</span>
+                </button>
+                <div class="faq-content">
+                    <div class="faq-inner">
+                        Sim. Veículos comerciais pagam conforme o número de eixos em contato com o solo. Nossa calculadora usa como referência um caminhão de 2 eixos. Para veículos com mais eixos, <strong>multiplique proporcionalmente</strong> ou consulte a concessionária da rodovia.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-trigger">
+                    <span>Existe desconto para usuários frequentes?</span>
+                    <span class="faq-mark">+</span>
+                </button>
+                <div class="faq-content">
+                    <div class="faq-inner">
+                        Sim. O <strong>Desconto de Usuário Frequente (DUF)</strong> concede abatimento progressivo de até 50% para passagens recorrentes na mesma praça durante o mês. É necessário cadastro em tag automática para ter acesso ao benefício.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-trigger">
+                    <span>Este site vende tags ou produtos?</span>
+                    <span class="faq-mark">+</span>
+                </button>
+                <div class="faq-content">
+                    <div class="faq-inner">
+                        Não. O Fotus Brasil Flow é um <strong>serviço estritamente informativo e gratuito</strong>. Não vendemos tags de pedágio, não processamos pagamentos e não coletamos dados pessoais na calculadora. Para contratar uma tag, procure empresas autorizadas pela ANTT.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-trigger">
+                    <span>Como funciona o pedágio Free Flow?</span>
+                    <span class="faq-mark">+</span>
+                </button>
+                <div class="faq-content">
+                    <div class="faq-inner">
+                        O Free Flow é um sistema de <strong>cobrança eletrônica sem cabines</strong>. Pórticos com câmeras e antenas identificam o veículo em movimento. Quem tem tag paga automaticamente; quem não tem recebe cobrança por correspondência com 30 dias para quitar.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-trigger">
+                    <span>O que acontece se eu não pagar o Free Flow?</span>
+                    <span class="faq-mark">+</span>
+                </button>
+                <div class="faq-content">
+                    <div class="faq-inner">
+                        Após o prazo de 30 dias, o débito pode ser encaminhado para cobrança via boleto, cartório e órgãos de proteção ao crédito. Em alguns estados, há possibilidade de bloqueio do licenciamento do veículo até a regularização.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-trigger">
+                    <span>Como são reajustadas as tarifas?</span>
+                    <span class="faq-mark">+</span>
+                </button>
+                <div class="faq-content">
+                    <div class="faq-inner">
+                        Os reajustes seguem o contrato de concessão, geralmente vinculados ao <strong>IPCA</strong>. A ANTT aprova os valores anualmente e publica em Resolução no Diário Oficial da União. Revisões extraordinárias podem ocorrer em casos excepcionais.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-kicker">— Última etapa —</div>
+        <h2 class="cta-title">Pronto para planejar sua <em>próxima viagem</em>?</h2>
+        <p class="cta-lead">
+            Nossa calculadora está disponível gratuitamente, sem cadastro. Totalmente em conformidade com a LGPD.
+        </p>
+        <a href="#calculadora" class="btn btn-gold btn-lg">
+            Iniciar cálculo <span style="margin-left: 8px;">→</span>
+        </a>
+    </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-disclaimer">
+            <strong>— Aviso Legal —</strong>
+            O Fotus Brasil Flow é um serviço estritamente informativo e gratuito. Não somos concessionária, não vendemos tags de pedágio, não cobramos taxas e não representamos órgãos públicos. Os valores exibidos são estimativas baseadas em dados públicos e podem não refletir o valor oficial vigente na data da consulta.
+        </div>
+
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <div class="logo-mark"><span>F</span></div>
+                    <div class="logo-text">
+                        <strong>Fotus</strong>
+                        <small>Brasil Flow</small>
+                    </div>
+                </a>
+                <p>Calculadora premium e informativa de pedágios nas principais rodovias do Brasil.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="#calculadora">Calcular</a></li>
+                    <li><a href="pages/sobre.html">Sobre</a></li>
+                    <li><a href="pages/contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="pages/termos.html">Termos de Uso</a></li>
+                    <li><a href="pages/privacidade.html">Privacidade</a></li>
+                    <li><a href="pages/cookies.html">Cookies</a></li>
+                    <li><a href="pages/lgpd.html">LGPD</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <div class="footer-contact-row">
+                    <span>contato@fotusbrasilflow.com.br</span>
+                    <span>dpo@fotusbrasilflow.com.br</span>
+                    <span>São Paulo — SP, Brasil</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>
+                <strong>Fotus Energia Solar LTDA</strong>
+                CNPJ 07.117.654/0002-20 · © 2026 Todos os direitos reservados.
+            </div>
+            <div>
+                <a href="pages/termos.html">Termos</a>
+                <a href="pages/privacidade.html">Privacidade</a>
+                <a href="pages/cookies.html">Cookies</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- ============ MODAL TERMOS ============ -->
+<div class="terms-modal" id="terms-modal">
+    <div class="terms-modal-box">
+        <div class="terms-modal-head">
+            <div class="kicker">— Termos de Acesso —</div>
+            <h2>Bem-vindo ao Fotus Brasil Flow</h2>
+        </div>
+        <div class="terms-modal-body">
+            <h4>Serviço Informativo</h4>
+            <p><strong>Calculadora gratuita</strong> de pedágios com caráter puramente informativo e educacional. Os valores apresentados são estimativas baseadas em dados públicos.</p>
+
+            <h4>Não Somos Concessionária</h4>
+            <p>Não vendemos tags, não processamos pagamentos e não representamos órgãos públicos ou concessionárias.</p>
+
+            <h4>Valores Aproximados</h4>
+            <p>Tarifas de pedágio sofrem reajustes. <strong>Sempre confirme o valor oficial</strong> com a concessionária antes de viajar.</p>
+
+            <h4>Privacidade (LGPD)</h4>
+            <p>Respeitamos sua privacidade conforme a Lei Geral de Proteção de Dados. Não coletamos dados pessoais na calculadora.</p>
+
+            <h4>Cookies</h4>
+            <p>Utilizamos cookies técnicos para funcionamento e analíticos para melhorar o serviço.</p>
+        </div>
+        <label class="terms-check" for="terms-check">
+            <input type="checkbox" id="terms-check">
+            <span>Li e aceito os <a href="pages/termos.html" target="_blank">Termos de Uso</a> e a <a href="pages/privacidade.html" target="_blank">Política de Privacidade</a>.</span>
+        </label>
+        <div class="terms-modal-foot">
+            <button class="btn btn-ghost" id="terms-reject">Recusar</button>
+            <button class="btn btn-gold" id="terms-accept" disabled>Aceitar e continuar</button>
+        </div>
+    </div>
+</div>
+
+<!-- ============ COOKIE BANNER ============ -->
+<div class="cookie-banner" id="cookie-banner">
+    <h4>— Cookies —</h4>
+    <p>Utilizamos cookies para melhorar sua experiência. Consulte nossa <a href="pages/cookies.html" style="color: var(--gold); text-decoration: underline;">Política de Cookies</a>.</p>
+    <div class="cookie-actions">
+        <button class="btn btn-ghost" id="cookie-reject">Essenciais</button>
+        <button class="btn btn-gold" id="cookie-accept">Aceitar todos</button>
+    </div>
+</div>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
